@@ -23,7 +23,12 @@ var HeroesComponent = (function () {
         this.getHeroes();
     };
     HeroesComponent.prototype.onSelect = function (hero) {
-        this.selectedHero = hero;
+        if (this.selectedHero === undefined) {
+            this.selectedHero = hero;
+        }
+        else {
+            this.selectedHero = undefined;
+        }
     };
     return HeroesComponent;
 }());
