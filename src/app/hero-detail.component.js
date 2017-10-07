@@ -27,6 +27,9 @@ var HeroDetailComponent = (function () {
             .switchMap(function (params) { return _this.heroService.getHero(+params.get('id')); })
             .subscribe(function (hero) { return _this.hero = hero; });
     };
+    HeroDetailComponent.prototype.goBack = function () {
+        this.location.back();
+    };
     return HeroDetailComponent;
 }());
 __decorate([
@@ -36,7 +39,7 @@ __decorate([
 HeroDetailComponent = __decorate([
     core_1.Component({
         selector: 'hero-detail',
-        template: "\n    <div *ngIf=\"hero\">\n      <h2>{{hero.name}} details!</h2>\n      <div>\n        <label>id: </label>{{hero.id}}\n      </div>\n      <div>\n        <label>name: </label>\n        <input [(ngModel)]=\"hero.name\" placeholder=\"name\"/>\n      </div>\n    </div>\n  "
+        templateUrl: './hero-detail.component.html'
     }),
     __metadata("design:paramtypes", [hero_service_1.HeroService,
         router_1.ActivatedRoute,
