@@ -17,7 +17,7 @@ AppComponent = __decorate([
     core_1.Component({
         selector: 'my-app',
         template: "\n  <h1>{{title}}</h1><h4>Check out my current \n  <a href=\"http://dakotacastleberg.netlify.com/\" target=\"_blank\">portfolio</a></h4>\n  <nav>\n  <a routerLink=\"/dashboard\" routerLinkActive=\"active\">Dashboard</a>\n  <a routerLink=\"/heroes\" routerLinkActive=\"active\">Heroes</a>\n  </nav>\n  <router-outlet></router-outlet>\n  ",
-        styleUrls: ['./app.component.css'],
+        styleUrls: ['app/app.component.css'],
     })
 ], AppComponent);
 exports.AppComponent = AppComponent;

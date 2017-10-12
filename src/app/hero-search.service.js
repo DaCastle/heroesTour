@@ -19,7 +19,7 @@ var HeroSearchService = (function () {
     HeroSearchService.prototype.search = function (term) {
         return this.http
             .get("api/heroes/?name=" + term)
-            .map(function (response) { return response.json().data; });
+            .map(function (results) { return results.json(); });
     };
     return HeroSearchService;
 }());

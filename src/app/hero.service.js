@@ -22,13 +22,13 @@ var HeroService = (function () {
         var url = this.heroesUrl + "/" + id;
         return this.http.get(url)
             .toPromise()
-            .then(function (response) { return response.json().data; })
+            .then(function (results) { return results.json(); })
             .catch(this.handleError);
     };
     HeroService.prototype.getHeroes = function () {
         return this.http.get(this.heroesUrl)
             .toPromise()
-            .then(function (response) { return response.json().data; })
+            .then(function (results) { return results.json(); })
             .catch(this.handleError);
     };
     HeroService.prototype.handleError = function (error) {
@@ -47,7 +47,7 @@ var HeroService = (function () {
         return this.http
             .post(this.heroesUrl, JSON.stringify({ name: name }), { headers: this.headers })
             .toPromise()
-            .then(function (res) { return res.json().data; })
+            .then(function (results) { return results.json(); })
             .catch(this.handleError);
     };
     HeroService.prototype.delete = function (id) {
